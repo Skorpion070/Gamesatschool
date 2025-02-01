@@ -222,23 +222,34 @@
     </secton>
     </p>
   </body>
-</html>
-<style>
+      <style>
+  /* Responsive design styles */
   * {
     box-sizing: border-box;
   }
 
-  html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  body {
+    max-width: 100%;
     overflow-x: hidden;
   }
 
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  button {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .popup {
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   @media screen and (max-width: 768px) {
@@ -255,9 +266,9 @@
       font-size: 14px;
     }
 
-    .popup {
-      width: 90%;
-      max-width: 400px;
+    #gameOfTheDay h2 {
+      font-size: 18px;
+      padding: 8px 16px;
     }
   }
 
@@ -270,11 +281,18 @@
       font-size: 18px;
     }
 
+    button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
     #gameOfTheDay h2 {
-      padding: 8px 12px;
       font-size: 16px;
+      padding: 6px 12px;
     }
   }
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</html>
 
 
