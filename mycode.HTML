@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        window.onload = function() {
+            var music = document.getElementById("backgroundMusic");
+            music.volume = 0.3; // Set volume to 30%
+            
+            // Add play/pause button
+            var button = document.createElement("button");
+            button.innerHTML = "🔊 Toggle Music";
+            button.style.position = "fixed";
+            button.style.bottom = "20px";
+            button.style.right = "20px";
+            button.style.padding = "10px";
+            button.style.zIndex = "1000";
+            button.style.backgroundColor = "#000";
+            button.style.color = "#fff";
+            button.style.border = "none";
+            button.style.borderRadius = "5px";
+            button.style.cursor = "pointer";
+            
+            button.onclick = function() {
+                if (music.paused) {
+                    music.play();
+                    button.innerHTML = "🔊 Toggle Music";
+                } else {
+                    music.pause();
+                    button.innerHTML = "🔈 Toggle Music";
+                }
+            };
+            
+            document.body.appendChild(button);
+        };
+    </script>
+    <script src="app.js"></script>
+    <img src="https://preview.redd.it/5dwd9ktnz7e51.jpg?width=1080&crop=smart&auto=webp&s=139985f4a1cbc246b494beb7357b0c0b80f42fdf" height="500" width="1400"
+   
+   style="border: 5px solid black; border-radius: 25px;"
+   <img id="myImage" src="https://preview.redd.it/5dwd9ktnz7e51.jpg?width=1080&crop=smart&auto=webp&s=139985f4a1cbc246b494beb7357b0c0b80f42fdf" alt="Description of image">
+   <section>
+    <h1> Games people play at school</h1>
+    <div id="gameOfTheDay">
+      <h2>Game of the Day</h2>
+      <style>
+        #gameOfTheDay h2 {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          margin: 0;
+          padding: 10px 20px;
+          background-color: rgb(0, 0, 0);
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+          z-index: 1000;
+        }
+      </style>
+      <div id="todaysGame"></div>
+    </div>
+
+    <script>
+      const games = [
+        {
+          name: "Drift Boss",
+          link: "https://www.mathplayground.com/pg_drift_boss.html",
+          image: "https://ar-pay.com/blog/wp-content/webp-express/webp-images/uploads/2024/11/Drift-Boss.jpg.webp"
+        },
+        {
+          name: "Snow Rider 3D", 
+          link: "https://www.hoodamath.com/games/snowrider3d.html",
+          image: "https://www.hoodamath.com/large/snowrider3d_300x225.jpg"
+        },
+        {
+          name: "Super Santa Jr",
+          link: "https://www.abcya.com/games/super_santa_jr",
+          image: "https://assets.abcya.com/webp_72f301a9-19cd-47c1-a094-25dd674a79f4.jpg"
+        },
+        {
+          name: "Drift Hunters",
+          link: "https://www.hoodamath.com/games/drifthunters.html",
+          image: "https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw"
+        },
+        {
+          name: "Duck Life",
+          link: "https://www.hoodamath.com/games/ducklife.html",
+          image: "https://www.coolmathgames.com/sites/default/files/DuckLife_OG-logo.jpg"
+        }
+      ];
+
+      function getGameOfTheDay() {
+        const today = new Date();
+        const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+        const gameIndex = dayOfYear % games.length;
+        return games[gameIndex];
+      }
+
+      function displayGameOfTheDay() {
+        const game = getGameOfTheDay();
+        const html = `
+          <h3>${game.name}</h3>
+          <a href="${game.link}" target="_blank">
+            <img src="${game.image}" height="200" width="200" style="border: 3px solid black; border-radius: 10px;">
+          </a>
+        `;
+        document.getElementById('todaysGame').innerHTML = html;
+      }
+
+      displayGameOfTheDay();
+    </script>
+    <p>
+      link to
+      <a
+        href= "https://www.mathplayground.com/pg_drift_boss.html"
+        target="_blank"
+      >
+        drift boss
+      <style>
+        #todaysGame {
+          position: fixed;
+          top: 20px;
+          right: 20px;
+          text-align: center;
+          background-color: rgba(0, 0, 0, 0.7);
+          padding: 15px;
+          border-radius: 10px;
+          z-index: 100;
+        }
+      </style>
+
+      </a>
+      <img src="https://ar-pay.com/blog/wp-content/webp-express/webp-images/uploads/2024/11/Drift-Boss.jpg.webp"height="100" width=100>
+      
+      link to 
+      <a href="https://www.primarygames.com/">primary games</a>
+      <img src="https://intranet.williamaustin-jun.luton.sch.uk/images/primary-games.png" height="100" width="100">
+      link to <a href="https://www.hoodamath.com/games/snowrider3d.html#gsc.tab=0"</a>
+      <img src="https://www.hoodamath.com/large/snowrider3d_300x225.jpg" height="100" width="100">
+      link to  <a href="https://www.abcya.com/games/super_santa_jr"target=_"blank">  super santa jr</a>
+      <img src="https://assets.abcya.com/webp_72f301a9-19cd-47c1-a094-25dd674a79f4.jpg" height="100" width="100">
+    link to <a href="https://www.hoodamath.com/games/drifthunters.html"> Drift Hunters</a>
+       <img src="https://play-lh.googleusercontent.com/8uN37O8ncKhkSODaZ_FU7WCNs9hZihjMzzntK8E6J_4BidHUieevzbcNwU3kkL-vaYmY=w526-h296-rw" height="100" width="100">
+     link to <a href="https://www.hoodamath.com/games/ducklife.html#gsc.tab=0"> Duck life</a>
+    <img src="https://www.coolmathgames.com/sites/default/files/DuckLife_OG-logo.jpg" height="100" width="100">
+    <button id="Click For Banned Games" onclick="openPopup()">Click For Banned Games</button>
+    <div class="popup">
+
+      <button onclick="closePopup()" style="background-color: red; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; position: absolute; top: 10px; right: 10px;">
+        X
+      </button>
+      <button id="Click for popular games" onclick="openPopularGamesPopup()">Click for popular games</button>
+      <div class="popularGames">
+      <style>
+        #Click\ for\ popular\ games {
+          background-color: blue;
+        }
+      </style>
+
+        
+      
+      
+
+
+      </button>
+      
+    </div>
+    <style>
+      #Click\ For\ Banned\ Games {
+        background-color: blue;
+      }
+    </style>
+    <div id="demo"></div>
+     <footer> <h6> Coded by owen sanders </h6> </footer>
+    <style>
+
+      body {
+        background: linear-gradient(to bottom, #000000, #800080);
+        min-height: 100vh;
+        margin: 0;
+        color: white;
+      button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+      
+      button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(27, 113, 83);
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+      }
+      }
+    </style>
+       
+    </secton>
+    </p>
+  </body>
+</html>
+
